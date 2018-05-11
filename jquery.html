@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+            margin:0;
+            padding:0;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid #ff0;
+            border-radius: 50%;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: chocolate;
+        }
+
+        div {
+            position: relative;
+            margin: 30px 0;
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+        }
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+</head>
+<body>
+
+    <button class="bagin">bagin</button>
+    <button class="stop">stop</button>
+    <button class="stopAll">stopAll</button>
+    <button class="stopF">stopF</button>
+    <div>
+        <p> this is a book</p>
+    </div>
+
+<script>
+    var bagin=$('.bagin');
+    var stop=$('.stop');
+    var stopAll=$('.stopAll');
+    var stopF=$('.stopF');
+    bagin.click(function () {
+        $('div').animate({
+            left:'500px',
+        },2000);
+        $('div').animate({
+            fontSize:'50px'
+        },2000)
+    });
+    stop.click(function () {
+        $('div').stop();
+    });
+    stopAll.click(function (){
+        $('div').stop(true)
+    })
+    stopF.click(function () {
+        $('div').stop(true,true)
+    })
+
+</script>
+
+</body>
+</html>
